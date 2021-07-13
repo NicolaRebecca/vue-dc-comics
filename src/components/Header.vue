@@ -1,73 +1,118 @@
 <template>
-    <div class="header-full">
-        <div class="logo-container">
-            <img src="../assets/dc-logo.png" />
-        </div>
-        <nav>
-            <ul>
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
-            </ul>
-        </nav>
-    </div>
+  <header class="container">
+    <nav>
+      <div class="logo">
+        <img src="../assets/dc-logo.png" alt="Logo DC" />
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li v-for="element in menuLinks" :key="element">
+            {{element.name}} 
+          </li>
+          <!-- <li><a href="">CHARACTERS</a></li> -->
+          <!-- <li><a href="">COMICS</a></li> -->
+          <!-- <li><a href="">MOVIES</a></li> -->
+          <!-- <li><a href="">TV</a></li> -->
+          <!-- <li><a href="">GAMES</a></li> -->
+          <!-- <li><a href="">COLLECTIBLES</a></li> -->
+          <!-- <li><a href="">VIDEOS</a></li> -->
+          <!-- <li><a href="">FANS</a></li> -->
+          <!-- <li><a href="">NEWS</a></li> -->
+          <!-- <li><a href="">SHOP</a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
-    name: 'Header'
-}
+  name: 'Header',
+  data: function() {
+  return{
+    menuLinks: [
+      {
+        href: '#',
+        name: 'CHARACTERS',
+      },
+      {
+        href: '#',
+        name: 'COMICS',
+      },
+      {
+        href: '#',
+        name: 'MOVIES',
+      },
+      {
+        href: '#',
+        name: 'TV',
+      },
+      {
+        href: '#',
+        name: 'GAMES',
+      },
+      {
+        href: '#',
+        name: 'COLLECTIBLES',
+      },
+      {
+        href: '#',
+        name: 'VIDEOS',
+      },
+      {
+        href: '#',
+        name: 'FANS',
+      },
+      {
+        href: '#',
+        name: 'NEWS',
+      },
+      {
+        href: '#',
+        name: 'SHOP',
+      },
+    ]
+  }
+  },
+};
 </script>
 
-<style lang="scss" scoped>
 
-    @import "../style/colors.scss";
+<style scoped lang="scss">
+@import '../style/colors';
 
-    .header-full {
-        display: flex;
-        justify-content: space-around;
-        margin-top:10px;
-        margin-bottom:10px;
+header {
+  height: 80px;
+  padding: 10px 0;
 
-        .logo-container{
-            img{
-                width: 60%;
-            }
-        }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        nav {
-
-            ul {
-                display: flex;
-                list-style: none;
-                font-size: 14px;
-                font-weight: bold;
-
-                li {
-                    height: 50px;
-                    line-height: 60px;
-                    padding: 0 10px;
-
-                    &:hover {
-                        background: $bg-color;
-                    }
-
-                }
-
-            }
-
-        }
-
-
+    img {
+      height: 60px;
     }
 
+    ul {
+      display: flex;
 
+      li {
+        
+        color: black;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        margin-left: 24px;
+        padding-bottom: 23px;
 
+          &:hover {
+            color: $dc-blue-color;
+            border-bottom: 5px solid $dc-blue-color;
+          }
+        
+      }
+    }
+  }
+}
 </style>
