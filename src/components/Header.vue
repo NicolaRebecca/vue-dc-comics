@@ -10,16 +10,6 @@
           <li v-for="element in menuLinks" :key="element">
             {{element.name}} 
           </li>
-          <!-- <li><a href="">CHARACTERS</a></li> -->
-          <!-- <li><a href="">COMICS</a></li> -->
-          <!-- <li><a href="">MOVIES</a></li> -->
-          <!-- <li><a href="">TV</a></li> -->
-          <!-- <li><a href="">GAMES</a></li> -->
-          <!-- <li><a href="">COLLECTIBLES</a></li> -->
-          <!-- <li><a href="">VIDEOS</a></li> -->
-          <!-- <li><a href="">FANS</a></li> -->
-          <!-- <li><a href="">NEWS</a></li> -->
-          <!-- <li><a href="">SHOP</a></li> -->
         </ul>
       </div>
     </nav>
@@ -27,55 +17,55 @@
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  data: function() {
-  return{
-    menuLinks: [
-      {
-        href: '#',
-        name: 'CHARACTERS',
-      },
-      {
-        href: '#',
-        name: 'COMICS',
-      },
-      {
-        href: '#',
-        name: 'MOVIES',
-      },
-      {
-        href: '#',
-        name: 'TV',
-      },
-      {
-        href: '#',
-        name: 'GAMES',
-      },
-      {
-        href: '#',
-        name: 'COLLECTIBLES',
-      },
-      {
-        href: '#',
-        name: 'VIDEOS',
-      },
-      {
-        href: '#',
-        name: 'FANS',
-      },
-      {
-        href: '#',
-        name: 'NEWS',
-      },
-      {
-        href: '#',
-        name: 'SHOP',
-      },
-    ]
-  }
-  },
-};
+  export default {
+    name: 'Header',
+    data: function() {
+      return {
+        menuLinks: [
+          {
+            href: '#',
+            name: 'CHARACTERS',
+          },
+          {
+            href: '#',
+            name: 'COMICS',
+          },
+          {
+            href: '#',
+            name: 'MOVIES',
+          },
+          {
+            href: '#',
+            name: 'TV',
+          },
+          {
+            href: '#',
+            name: 'GAMES',
+          },
+          {
+            href: '#',
+            name: 'COLLECTIBLES',
+          },
+          {
+            href: '#',
+            name: 'VIDEOS',
+          },
+          {
+            href: '#',
+            name: 'FANS',
+          },
+          {
+            href: '#',
+            name: 'NEWS',
+          },
+          {
+            href: '#',
+            name: 'SHOP',
+          },
+        ] 
+      }
+    },
+  };
 </script>
 
 

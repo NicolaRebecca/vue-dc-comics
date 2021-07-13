@@ -36,6 +36,7 @@ export default {
 @import '../style/colors';
 
 main {
+  padding-top:40px;
   background-color: black;
   color: $text-white;
 }
