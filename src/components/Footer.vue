@@ -1,118 +1,173 @@
 <template>
-
-    <div class="footer-container">
-
-
-        <!-- div con due ul (menu del footer) -->
-        <div class="menu-container">
+  <footer>
+    <section class="section-link">
+      <div class="container">
+        <div class="left-side">
+          <div class="col">
             <ul>
-                <li>DC COMICS</li>
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Comics</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">News</a></li>
+              <li class="bold">DC COMICS</li>
+              <li><a href="">Characters</a></li>
+              <li><a href="">Comics</a></li>
+              <li><a href="">Movies</a></li>
+              <li><a href="">TV</a></li>
+              <li><a href="">Games</a></li>
+              <li><a href="">Videos</a></li>
+              <li><a href="">News</a></li>
             </ul>
-
             <ul>
-                <li>SHOP</li>
-                <li><a href="#">Shop DC</a></li>
-                <li><a href="#">Shop DC collectibles</a></li>
+              <li class="bold">SHOP</li>
+              <li><a href="">Shop DC</a></li>
+              <li><a href="">Shop DC Collectibles</a></li>
             </ul>
+          </div>
 
+          <div class="col">
             <ul>
-                <li>DC</li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Ad choises</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Subscriptions</a></li>
-                <li><a href="#">Talent workshops</a></li>
-                <li><a href="#">CPSC Certificates</a></li>
-                <li><a href="#">Ratings</a></li>
-                <li><a href="#">Shop help</a></li>
-                <li><a href="#">Contact us</a></li>
+              <li class="bold">DC</li>
+              <li><a href="">Terms of Use</a></li>
+              <li><a href="">Privacy policy (New)</a></li>
+              <li><a href="">Ad choise</a></li>
+              <li><a href="">Advertising</a></li>
+              <li><a href="">Jobs</a></li>
+              <li><a href="">Subscrition</a></li>
+              <li><a href="">Talent Workshops</a></li>
+              <li><a href="">CPSC Certificates</a></li>
+              <li><a href="">Ratings</a></li>
+              <li><a href="">Shop Help</a></li>
+              <li><a href="">Contact Us</a></li>
             </ul>
+          </div>
 
+          <div class="col">
             <ul>
-                <li>SITES</li>
-                <li><a href="#">DC</a></li>
-                <li><a href="#">MAD Magazine</a></li>
-                <li><a href="#">DC Kids</a></li>
-                <li><a href="#">DC universe</a></li>
-                <li><a href="#">DC power visa</a></li>
+              <li class="bold">SITES</li>
+              <li><a href="">DC</a></li>
+              <li><a href="">MAD Magazine</a></li>
+              <li><a href="">DC Kids</a></li>
+              <li><a href="">DC Universe</a></li>
+              <li><a href="">DC Power Visa</a></li>
             </ul>
+          </div>
         </div>
 
-        <!-- div con logo -->
-        <div class="logo-container">
-            <img src="../assets/dc-logo-bg.png" />
+        <div class="right-side">
+          <img src="../assets/dc-logo-bg.png" alt="" />
         </div>
-        
-    </div>
+      </div>
+    </section>
+
+    <section class="social">
+      <div class="container">
+        <div class="left-side">
+          <span> SIGN-UP NOW! </span>
+        </div>
+
+        <div class="right-side">
+          <span>FOLLOW US</span>
+          <img src="../assets/footer-facebook.png" alt="" />
+          <img src="../assets/footer-twitter.png" alt="" />
+          <img src="../assets/footer-youtube.png" alt="" />
+          <img src="../assets/footer-pinterest.png" alt="" />
+          <img src="../assets/footer-periscope.png" alt="" />
+        </div>
+      </div>
+    </section>
+  </footer>
 </template>
 
 <script>
 export default {
-    name: 'Footer'
-}
+  name: "Footer",
+};
 </script>
 
-<style lang="scss" scoped>
 
-    .footer-container {
-        background-image: url("../assets/footer-bg.jpg");
-        display: flex;
+<style scoped lang="scss">
+@import "../style/colors";
 
+.section-link {
+  background-image: url("../assets/footer-bg.jpg");
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
 
-        .logo-container {
-            width: 30%;
-            img{
-                width: 70%;
-            }
-        }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
-        .menu-container {
-            display: flex;
-            flex-grow: 1;
-            margin-left: 100px;
+  .left-side {
+    display: flex;
 
-            ul {
-                width: 50%;
-                list-style: none;
+    li {
+      color: white;
+      padding: 5px 24px 0 0;
+      font-family: "Roboto Condensed", sans-serif;
 
-                li {
-                    font-size: 12px;
-                    margin:5px 0;
+      &:first-child {
+        font-weight: bold;
+        padding-bottom: 14px;
+      }
 
-                    &:first-child {
-                        color: white;
-                        font-size: 18px;
-                        font-weight: bold;
-                    }
-
-                    a {
-                        color: rgb(214, 210, 210);
-                        text-decoration: none;
-
-                        &:hover {
-                            text-decoration: underline;
-                        } 
-
-                    }
-
-
-                }
-
-
-            }
-
-
-        }
-
+      &:last-child {
+        padding-bottom: 14px;
+      }
     }
 
+    a {
+      color: gray;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+  }
+
+  .right-side {
+    img {
+      height: 550px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+  }
+}
+
+.social {
+  background-color: #303030;
+  height: 80px;
+
+  .container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 80px;
+
+    span {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .left-side {
+      span {
+        color: white;
+        padding: 10px;
+        border: 1px solid $dc-blue-color;
+        box-shadow: 0 0 2px 1px $dc-blue-color;
+      }
+    }
+
+    .right-side {
+      span {
+        color: $dc-blue-color;
+      }
+
+      img {
+        padding-left: 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
 </style>

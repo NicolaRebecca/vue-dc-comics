@@ -1,51 +1,42 @@
 <template>
-    <div class="main-container">
-        <div class="main-page">
-            <h1>Content goes here</h1>
-        </div>
-        <div class="pre-footer">
-            <ul>
-                <li>DIGITAL COMICS</li>
-                <li>DC MERCHANDISE</li>
-                <li>SUBSCRIPTION</li>
-                <li>COMIC SHOP LOCATOR</li>
-                <li>DC POWER VISA</li>
-            </ul>
-        </div>
+  <main>
+    <div class="container">
+      <div class="row">
+        <Card
+          v-for="(element, index) in comics"
+          :key="index"
+          :thumb="element.thumb"
+          :price="element.price"
+          :title="element.series"
+          :type="element.type"
+        />
+      </div>
     </div>
-
-
-    
+  </main>
 </template>
 
 <script>
+import Card from './Card.vue';
+
 export default {
-    name: 'Main'
-}
+  name: 'Main',
+  components: {
+    Card,
+  },
+  props: {
+    comics: Array,
+  },
+  created() {
+    console.log(this.comics);
+  },
+};
 </script>
 
+<style scoped lang="scss">
+@import '../style/colors';
 
-<style lang="scss" scoped>
-
-    .main-container {
-        background-color: darkgray;
-        height: 100px;
-
-        .pre-footer{
-            text-align: center;
-            width: 100%;
-            height: 100px;
-            background-color: royalblue;
-            li{
-                color: white;
-                display: inline-block;
-                margin-left:50px;
-                margin-top:20px;
-            }
-        }
-
-
-
-    }
-
+main {
+  background-color: black;
+  color: $text-white;
+}
 </style>
